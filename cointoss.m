@@ -1,17 +1,31 @@
 function res = cointoss(t,W)
-    P=W(1:2);
-    V=W(3:4); 
-    Theta=W(5:6);
-    m=0.00567;
-    dtdt=omega %change in angle
+    %%% constants %%%
+    m = 0.00567;
+    g = 9.8;
+    ihat = [1; 0];
+    jhat = [0; 1];
+    %%%%%%%%%%%%%%%%%
+
+    P = W(1:2);
+    V = W(3:4); 
+    Theta = W(5:6);
+
+    dtdt = omega %change in angle
+    dpdt = V
+    dvdt = acceleration
+
+    res = [dpdt; dvdt; dtdt];
+
     function res = omega()
-        res = [0;0];
+        res = [0; 0];
     end
-    dpdt=V
-    dvdt=acceleration
+
     function res = acceleration()
-        g=9.8;
-        res =[0;-g];
+        res = gravity
     end
-    res=[dpdt;dvdt;dtdt];
+
+    function res = gravity()
+        res = -g * jhat;
+    end
+
 end
