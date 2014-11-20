@@ -3,7 +3,7 @@ function res = cointoss(t,W)
     V=W(3:4); 
     Theta=W(5:6);
     m=0.00567;
-    dtdt=omega
+    dtdt=omega %change in angle
     function res = omega()
         res = [0;0];
     end
