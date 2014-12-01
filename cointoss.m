@@ -49,5 +49,6 @@ function res = cointoss(t,W)
     function res = area(Theta)
         a = r * sin((pi / 2) - Theta);
         res = pi * r * a;
+        res = abs(res);
     end
 end
