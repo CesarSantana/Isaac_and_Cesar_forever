@@ -37,7 +37,7 @@ function res = cointoss(t,W)
        Cd = 0.5;
        v = norm(V);
        Vhat = V / v;
-       A = area(Theta);
+       A = exposedArea(r, Theta);
 
        res = 0.5 * rho * Cd * A * v ^ 2 * -Vhat;
     end
@@ -46,9 +46,4 @@ function res = cointoss(t,W)
       res = 0;  
     end
 
-    function res = area(Theta)
-        a = r * sin((pi / 2) - Theta);
-        res = pi * r * a;
-        res = abs(res);
-    end
 end
