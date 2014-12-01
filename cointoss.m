@@ -36,6 +36,6 @@ function res = cointoss(t,W)
        v = norm(V);
        Vhat = V / v;
 
-       res = 0.5 * rho * Cd * A * v ^ 2 * -Vhat
+       res = 0.5 * rho * Cd * A * v ^ 2 * -Vhat;
     end
 end
