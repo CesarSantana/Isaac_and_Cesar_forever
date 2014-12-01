@@ -3,7 +3,7 @@ function res = cointoss_ode_plot()
 
     % options = odeset('Event', @event);
     % ode45(@cointoss, [0, 5], [0, 0, 0, 20, 0, 2], options);
-    ode45(@cointoss, [0, 5], [0, 0, 0, 20, 0, 2]);
+    ode45(@cointoss, [0, 10], [0, 0, 0, 20, 0, 2]);
     hold on;
 
     xlabel('time (s)');

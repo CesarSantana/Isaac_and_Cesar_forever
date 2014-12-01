@@ -26,20 +26,12 @@ function res = cointoss(t,W)
     end
 
     function res = acceleration(V)
-        res = gravity + air_resistance(V) ./ m;
+        area = exposedArea(r, Theta);
+        res = gravity + airResistance(V, area) ./ m;
     end
 
     function res = gravity()
         res = -g * jhat;
-    end
-
-    function res = air_resistance(V)
-       Cd = 0.5;
-       v = norm(V);
-       Vhat = V / v;
-       A = exposedArea(r, Theta);
-
-       res = 0.5 * rho * Cd * A * v ^ 2 * -Vhat;
     end
 
     function res = alpha(O)
