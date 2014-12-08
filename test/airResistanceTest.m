@@ -5,7 +5,7 @@ function tests = airResistanceTest
 end
 
 function setupOnce(testCase)
-    addpath(cd(cd('..'))); % add parent directory to path
+    addpath(cd(cd('../src'))); % add parent directory to path
 end
 
 function testZeroVelocity(testCase)
