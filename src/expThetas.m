@@ -1,4 +1,4 @@
-function plot0164
+function expThetas
     load('../data/0164_data.csv');
     T = X0164_data(3:end, 1);
     X = X0164_data(3:end, 2);

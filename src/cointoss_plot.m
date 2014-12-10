@@ -1,5 +1,5 @@
 function res = cointoss_plot()
-    [T, M] = ode45(@cointoss, [0, 5], [0, 0, 0, 20, 0, 2]);
+    [T, M] = ode45(@cointoss, [0, 5], [0, 0, 0, 25, 0, 2]);
     size(T)
     size(M)
 

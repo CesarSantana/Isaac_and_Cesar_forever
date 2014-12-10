@@ -1,5 +1,4 @@
-function res = airResistance(V, area)
-    Cd = 0.8;
+function res = airResistance(V, area, Cd)
     rho = 1.2;
     v = norm(V);
 
