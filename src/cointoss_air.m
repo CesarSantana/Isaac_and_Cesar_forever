@@ -1,4 +1,4 @@
-function res = cointoss(t,W)
+function res = cointoss_air(t,W)
     %%% constants %%%
     m = 0.00567;
     rho = 1.2041;
@@ -12,17 +12,23 @@ function res = cointoss(t,W)
     V = W(3:4); 
     Theta = W(5);
     Omega = W(6);
+    dragCoeff = W(7);
 
     dtdt = Omega; %change in angle
     dodt = alpha(Omega);
     dpdt = V;
     dvdt = acceleration(V);
 
-    res = [dpdt; dvdt; dtdt; dodt];
+    % res = [dpdt; dvdt; dtdt];
+    res = [dpdt; dvdt; dtdt; dodt; 0];
+
+    function res = omega()
+        res = [0; 0];
+    end
 
     function res = acceleration(V)
         area = exposedArea(r, Theta);
-        res = gravity + airResistance(V, area) ./ m;
+        res = gravity + airResDC(V, area, dragCoeff) ./ m;
     end
 
     function res = gravity()

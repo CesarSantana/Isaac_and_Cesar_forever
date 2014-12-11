@@ -3,14 +3,14 @@
     <property name="version" type="string">4.87</property>
     <property name="width" type="double">480.0</property>
     <property name="height" type="double">640.0</property>
-    <property name="magnification" type="double">2.0</property>
-    <property name="center_x" type="int">512</property>
-    <property name="center_y" type="int">934</property>
+    <property name="magnification" type="double">0.8908987181403393</property>
+    <property name="center_x" type="int">646</property>
+    <property name="center_y" type="int">360</property>
     <property name="videoclip" type="object">
     <object class="org.opensourcephysics.media.core.VideoClip">
         <property name="video" type="object">
         <object class="org.opensourcephysics.media.xuggle.XuggleVideo">
-            <property name="path" type="string">MVI_0169.MOV</property>
+            <property name="path" type="string">../videos/MVI_0169.MOV</property>
             <property name="filters" type="collection" class="java.util.ArrayList">
                 <property name="item" type="object">
                 <object class="org.opensourcephysics.media.core.RotateFilter">
@@ -35,7 +35,7 @@
     <object class="org.opensourcephysics.media.core.StepperClipControl">
         <property name="rate" type="double">1.0</property>
         <property name="delta_t" type="double">33.36666666666667</property>
-        <property name="frame" type="int">139</property>
+        <property name="frame" type="int">187</property>
     </object>
     </property>
     <property name="coords" type="object">
@@ -47,11 +47,11 @@
         <property name="framedata" type="array" class="[Lorg.opensourcephysics.media.core.ImageCoordSystem$FrameData;">
             <property name="[0]" type="object">
             <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
-                <property name="xorigin" type="double">320.0</property>
-                <property name="yorigin" type="double">240.0</property>
+                <property name="xorigin" type="double">263.5717030144969</property>
+                <property name="yorigin" type="double">599.4930500290338</property>
                 <property name="angle" type="double">0.0</property>
-                <property name="xscale" type="double">1.0</property>
-                <property name="yscale" type="double">1.0</property>
+                <property name="xscale" type="double">1006.0080196912259</property>
+                <property name="yscale" type="double">1006.0080196912259</property>
             </object>
             </property>
         </property>
@@ -70,7 +70,7 @@
             </object>
             </property>
             <property name="footprint" type="string">Footprint.BoldSimpleAxes</property>
-            <property name="visible" type="boolean">false</property>
+            <property name="visible" type="boolean">true</property>
             <property name="trail" type="boolean">false</property>
         </object>
         </property>
@@ -1228,10 +1228,76 @@
             </property>
         </object>
         </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure">
+            <property name="name" type="string">calibration tape A</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">0</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">255</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.DoubleArrow</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixedtape" type="boolean">true</property>
+            <property name="fixedlength" type="boolean">true</property>
+            <property name="readonly" type="boolean">false</property>
+            <property name="stickmode" type="boolean">false</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData;">
+                <property name="[0]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData">
+                    <property name="x1" type="double">24.48728672460046</property>
+                    <property name="y1" type="double">599.4930500290338</property>
+                    <property name="x2" type="double">458.8800994203277</property>
+                    <property name="y2" type="double">600.6155120773432</property>
+                </object>
+                </property>
+            </property>
+            <property name="worldlengths" type="array" class="[Ljava.lang.Double;">
+                <property name="[0]" type="double">100.0</property>
+            </property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure">
+            <property name="name" type="string">calibration tape B</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">0</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">255</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.DoubleArrow</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixedtape" type="boolean">true</property>
+            <property name="fixedlength" type="boolean">true</property>
+            <property name="readonly" type="boolean">false</property>
+            <property name="stickmode" type="boolean">false</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData;">
+                <property name="[0]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData">
+                    <property name="x1" type="double">439.79824459906837</property>
+                    <property name="y1" type="double">49.48664635744112</property>
+                    <property name="x2" type="double">460.0025614686371</property>
+                    <property name="y2" type="double">603.9828982222713</property>
+                </object>
+                </property>
+            </property>
+            <property name="worldlengths" type="array" class="[Ljava.lang.Double;">
+                <property name="[0]" type="double">100.0</property>
+            </property>
+        </object>
+        </property>
     </property>
-    <property name="selectedtrack" type="string">coin</property>
+    <property name="selectedtrack" type="string">calibration tape A</property>
     <property name="dividers" type="array" class="[D">
-        <property name="array" type="string">{0.7192016517549896,0.5013698630136987,1.0,0.32897453544390914}</property>
+        <property name="array" type="string">{0.8209993674889311,0.5,1.0,0.20872865275142316}</property>
     </property>
     <property name="views" type="array" class="[[Lorg.opensourcephysics.cabrillo.tracker.TView;">
         <property name="[1]" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TView;">
@@ -1244,8 +1310,8 @@
                         <property name="[1]" type="string">t</property>
                         <property name="[2]" type="string">x</property>
                         <property name="[3]" type="string">y</property>
-                        <property name="[4]" type="string">vy</property>
-                        <property name="[5]" type="string">vx</property>
+                        <property name="[4]" type="string">vx</property>
+                        <property name="[5]" type="string">vy</property>
                         <property name="[6]" type="string">ax</property>
                         <property name="[7]" type="string">ay</property>
                         <property name="[8]" type="string">rotation</property>
@@ -1283,6 +1349,6 @@
         <property name="stretch_acceleration" type="int">1</property>
     </object>
     </property>
-    <property name="track_control_x" type="int">4</property>
-    <property name="track_control_y" type="int">112</property>
+    <property name="track_control_x" type="int">292</property>
+    <property name="track_control_y" type="int">170</property>
 </object>

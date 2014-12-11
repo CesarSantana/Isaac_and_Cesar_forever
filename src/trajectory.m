@@ -10,17 +10,18 @@ function res = cointoss_ode_plot()
 
     clf;
     hold on;
-    plot(T, [X, Y, Vx, Vy, Theta, Omega], 'LineWidth', 4);
+    plot(X, Y, 'LineWidth', 4);
 
     xMin = min(X);
     xMax = max(X);
     yMin = min(Y);
     yMax = max(Y);
 
-    xlabel('magnitude');
-    ylabel('time (s)');
-    title('magnitude vs. time');
-    legend('x-position', 'y-position', 'x-velocity', 'y-velocity', 'theta', 'omega');
+    axis([xMin, xMax, yMin, yMax]);
+
+    xlabel('x (m)');
+    ylabel('y (m)');
+    title('position vs. time');
 
     function [value, isterminal, direction] = event(t, Y)
         value = Y(2);
