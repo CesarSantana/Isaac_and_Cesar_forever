@@ -1,0 +1,26 @@
+function res = conserve_energy()
+%proves conservation of energy
+    [T,M] = cointoss_ode
+    X = M(:,1);
+    Y = M(:,2);
+    Vx = M(:,3);
+    Vy = M(:,4);
+    theta = M(:,5);
+    M(:,6) = om;
+    Inertia = r * m * Vy./ omega;
+    function res = gravitational_energy()
+        potential = -m * g * Y;
+        res = potential;
+    end 
+    function res = translationalKE()
+        translational = 1/2 * m * Vy.^2;
+        res = translational;
+    end
+    function res = rotationalKE()
+        rotational = 1/2 * Inertia * omega^2;
+        res = rotational;
+    end
+    total = rotational + translational + potential;
+    res = total;
+    plot (t, total)
+end
