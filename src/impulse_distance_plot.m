@@ -1,6 +1,6 @@
 function res = impulse_distance_plot()
     r = 12.13e-3
-    J = linspace (0, 0.5, 10);
+    J = linspace (0, 0.01, 10);
     D = linspace (0, r, 10);
     
     for ji = 1:length(J)
@@ -16,7 +16,10 @@ function res = impulse_distance_plot()
     end
 
     clf;
-    pcolor (J,D,R)
+    contourf (J,D,R)
+    xlabel ('impulse (N*s)')
+    ylabel ('distance (m)')
+    title ('Impulse v. Distance')
     colorbar;
     
     function [value, isterminal, direction] = event(t, Y)
