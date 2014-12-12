@@ -19,7 +19,7 @@ function expThetas
     VX179 = X0179_data(3:end, 4);
     VY179 = X0179_data(3:end, 5);
 
-        % line up times
+    % line up times
     dt = T169(1) - T164(1);
     T169 = T169 - dt;
 
@@ -31,14 +31,15 @@ function expThetas
 
     clf;
     hold on;
-    %plot(T164, VX164, 'r', 'LineWidth', 4);
-    %plot(T164, VY164, 'b', 'LineWidth', 4);
-    %plot(T169, VX169, 'r', 'LineWidth', 4);
-    %plot(T169, VY169, 'b', 'LineWidth', 4);
-    %plot(T177, VX177, 'r', 'LineWidth', 4);
-    %plot(T177, VY177, 'b', 'LineWidth', 4);
-    plot(T179, VX179, 'r', 'LineWidth', 4);
-    plot(T179, VY179, 'b', 'LineWidth', 4);
+
+    T = T179;
+    VX = VX179;
+    VY = VY179;
+
+    xlim([min(T), max(T)]);
+
+    plot(T, VX, 'r', 'LineWidth', 4);
+    plot(T, VY, 'b', 'LineWidth', 4);
 
     xlabel('time (s)');
     ylabel('velocity (m/s)');

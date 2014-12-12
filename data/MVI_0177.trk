@@ -34,8 +34,8 @@
     <property name="clipcontrol" type="object">
     <object class="org.opensourcephysics.media.core.StepperClipControl">
         <property name="rate" type="double">1.0</property>
-        <property name="delta_t" type="double">33.36666666666667</property>
-        <property name="frame" type="int">198</property>
+        <property name="delta_t" type="double">2.857142857142857</property>
+        <property name="frame" type="int">153</property>
     </object>
     </property>
     <property name="coords" type="object">
