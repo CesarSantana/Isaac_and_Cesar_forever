@@ -26,7 +26,8 @@ function distance_flip_rate
     length(minFlips:maxFlips-1)
 
     clf;
-    plot(0:length(F)-1, F, 'r.', 'MarkerSize', 25);
+    plot(0:length(F)-1, F, 'LineWidth', 6, 'Color', colors(5));
     xlabel('flips');
-    ylabel('Δ distance');
+    ylabel('change in distance');
+    title('change in distance needed for next flip');
 end

@@ -28,7 +28,7 @@ function impulse_flip_rate
     clf;
     plot(0:length(F)-1, F, 'LineWidth', 6, 'Color', colors(4));
     xlabel('flips');
-    ylabel('change in impulse (J)');
+    ylabel('change in impulse (Ns)');
     title('impulse needed for next flip');
 
     xlim([0, 17]);

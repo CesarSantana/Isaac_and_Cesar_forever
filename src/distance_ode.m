@@ -3,7 +3,7 @@ function distance_ode
     j = 0.25 / 2;
     D = linspace(0, 0.00411, 4000);
     
-    options = odeset('Event', @event, 'RelTol', 1e-12);
+    options = odeset('Event', @event, 'RelTol', 1e-10);
 
     for di = 1:length(D)
         di
