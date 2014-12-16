@@ -18,15 +18,15 @@ function cointoss_ode_flips
 
     theta = 0;
     prevT = 0;
-    color = 'r';
+    color = colors(2);
     for i = 1:size(Theta)
         if Theta(i) - theta >= 180
             drawRect(prevT, T(i), yMin, yMax, color);
 
-            if  color == 'r'
+            if  color == colors(2)
                 color = colors(3);
             else
-                color = 'r';
+                color = colors(2);
             end
             theta = theta + 180;
             prevT = T(i);
@@ -43,7 +43,7 @@ function cointoss_ode_flips
     title('position vs. time');
 
     % weird legend
-    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', 'r');
+    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', colors(2));
     plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', colors(3));
     legend('position', 'heads', 'tails');
 
