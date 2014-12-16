@@ -22,4 +22,5 @@ function punchline_plot
 
     xlabel('impulse (Ns)');
     ylabel('distance (mm)');
+    title('flips vs. impulse and distance');
 end
