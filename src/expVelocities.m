@@ -38,8 +38,8 @@ function expThetas
 
     xlim([min(T), max(T)]);
 
-    plot(T, VX, 'r', 'LineWidth', 4);
-    plot(T, VY, 'b', 'LineWidth', 4);
+    plot(T, VX, 'r', 'LineWidth', 4, 'Color', colors(3));
+    plot(T, VY, 'b', 'LineWidth', 4, 'Color', colors(5));
 
     xlabel('time (s)');
     ylabel('velocity (m/s)');
