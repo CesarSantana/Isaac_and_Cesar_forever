@@ -24,7 +24,7 @@ function cointoss_ode_flips
             drawRect(prevT, T(i), yMin, yMax, color);
 
             if  color == 'r'
-                color = 'b';
+                color = colors(3);
             else
                 color = 'r';
             end
@@ -44,7 +44,7 @@ function cointoss_ode_flips
 
     % weird legend
     plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', 'r');
-    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', 'b');
+    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', colors(3));
     legend('position', 'heads', 'tails');
 
     function drawRect(x1, x2, y1, y2, color)
