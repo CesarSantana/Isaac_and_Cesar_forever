@@ -36,15 +36,15 @@ function cointoss_ode_flips
 
     axis([tMin, tMax, yMin, yMax]);
 
-    plot(T, Y, 'LineWidth', 4, 'Color', 'k');
+    plot(T, Y, 'LineWidth', 8, 'Color', 'k');
 
     xlabel('time (s)');
     ylabel('y-position (m)');
     title('position vs. time');
 
     % weird legend
-    plot([-10, -10], [-10, -10], 'LineWidth', 4, 'Color', 'r');
-    plot([-10, -10], [-10, -10], 'LineWidth', 4, 'Color', 'b');
+    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', 'r');
+    plot([-10, -10], [-10, -10], 'LineWidth', 8, 'Color', 'b');
     legend('position', 'heads', 'tails');
 
     function drawRect(x1, x2, y1, y2, color)
