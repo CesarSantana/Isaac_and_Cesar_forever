@@ -29,13 +29,16 @@ function res = conserve_energy()
     res = total;
     clf;
     hold on;
-    plot (T, total, 'LineWidth', 4)
-    plot (T, rotational, 'r', 'LineWidth',4)
-    plot (T, translational, 'g', 'LineWidth', 4)
-    plot (T, potential, 'k', 'LineWidth', 4)
+    plot (T, total, 'LineWidth', 4, 'Color', colors(4))
+    plot (T, rotational, 'r', 'LineWidth',4, 'Color', colors(2))
+    plot (T, translational, 'g', 'LineWidth', 4, 'Color', colors(5))
+    plot (T, potential, 'k', 'LineWidth', 4, 'Color', colors(3))
     legend ( 'total','rotational', 'translational', 'potential');
     xlabel ('time (s)')
     ylabel ('energy (joules)')
     title ('Conservation of Energy')
+
+    xlim([0, 0.3]);
+    ylim([0, .08]);
    
 end
