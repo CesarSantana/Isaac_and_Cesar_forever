@@ -36,10 +36,10 @@ function expThetas
 
     clf;
     hold on;
-    plot(T164, Theta164, 'r', 'LineWidth', 4);
-    plot(T169, Theta169, 'b', 'LineWidth', 4);
-    plot(T177, Theta177, 'g', 'LineWidth', 4);
-    plot(T179, Theta179, 'k', 'LineWidth', 4);
+    plot(T164, Theta164, 'r', 'LineWidth', 6, 'Color', colors(2));
+    plot(T169, Theta169, 'b', 'LineWidth', 6, 'Color', colors(3));
+    plot(T177, Theta177, 'g', 'LineWidth', 6, 'Color', colors(4));
+    plot(T179, Theta179, 'k', 'LineWidth', 6, 'Color', colors(5));
 
     xlabel('time (s)');
     ylabel('theta (degrees)');
