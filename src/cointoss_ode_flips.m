@@ -1,5 +1,5 @@
 function cointoss_ode_flips
-    [T, M] = cointoss_ode_precise;
+    [T, M] = cointoss_ode;
 
     X = M(:, 1);
     Y = M(:, 2);
@@ -38,8 +38,8 @@ function cointoss_ode_flips
 
     plot(T, Y, 'LineWidth', 4, 'Color', 'k');
 
-    xlabel('t (s)');
-    ylabel('y (m)');
+    xlabel('time (s)');
+    ylabel('y-position (m)');
     title('position vs. time');
 
     % weird legend
