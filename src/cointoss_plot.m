@@ -8,7 +8,7 @@ function res = cointoss_plot()
     plot(T, M(:, 2), 'LineWidth', 6, 'Color', colors(3));
     xlabel('time (s)');
     ylabel('position');
-    title('positon vs. time');
+    title('position vs. time');
     legend('x-position', 'y-positon');
 
     xlim([0, 2.7]);
