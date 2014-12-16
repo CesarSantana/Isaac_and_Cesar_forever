@@ -1,21 +1,27 @@
 function res = cointoss_plot()
-    [T, M] = ode45(@cointoss, [0, 5], [0, 0, 0, 25, 0, 2]);
-    size(T)
-    size(M)
+    [T, M] = cointoss_ode;
 
     subplot(2, 1, 1);
 
-    plot(T, M(:, 1:2));
+    hold on;
+    plot(T, M(:, 1), 'LineWidth', 6, 'Color', colors(2));
+    plot(T, M(:, 2), 'LineWidth', 6, 'Color', colors(3));
     xlabel('time (s)');
     ylabel('position');
     title('positon vs. time');
     legend('x-position', 'y-positon');
 
-    subplot(2, 1, 2);
+    xlim([0, 2.7]);
 
-    plot(T, M(:, 3:4));
+    subplot(2, 1, 2);
+    
+    hold on;
+    plot(T, M(:, 3), 'LineWidth', 6, 'Color', colors(4));
+    plot(T, M(:, 4), 'LineWidth', 6, 'Color', colors(5));
     xlabel('time (s)');
     ylabel('velocity');
     title('velocity vs. time');
     legend('x-velocity', 'y-velocity');
+
+    xlim([0, 2.7]);
 end
